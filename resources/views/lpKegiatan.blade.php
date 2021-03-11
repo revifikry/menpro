@@ -41,10 +41,13 @@
 
                                     </p>
                             </div>
-                            @endforeach
+
 
                         </div>
-                        @endif
+
+                    </div>
+                    @endforeach
+                    @endif
                 </a>
                 <br />
                 <br />

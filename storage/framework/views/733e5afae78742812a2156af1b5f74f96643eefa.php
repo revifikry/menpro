@@ -1,6 +1,4 @@
-@extends('layouts.landing')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <!-- Start category Area -->
 <div class="text-center feature-head">
     <br />
@@ -16,27 +14,27 @@
     <div class="container">
         <div class="row">
             <a href="https://www.rubin.id/daftar-rubin.html">
-                @if($peng->isEmpty())
+                <?php if($peng->isEmpty()): ?>
                 <h3 class="text-center" style="margin-top:60px;border:1px solid #333;padding:10px;"> Belum ada pengumuman </h3>
-                @else
-                @foreach ($peng as $p)
+                <?php else: ?>
+                <?php $__currentLoopData = $peng; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-header">
                             <center>
-                                <h4><a href="{{url("/news/".$p->id)}}">{{ $p->judul }}</a></h4>
+                                <h4><a href="<?php echo e(url("/news/".$p->id)); ?>"><?php echo e($p->judul); ?></a></h4>
                             </center>
                         </div>
                         <div class="card-body" style=" background-color: #f4f4f4;">
                             <center>
-                                <img src="{{asset("$p->thumbnail")}}" alt="" style="width:200px;height:300px;">
+                                <img src="<?php echo e(asset("$p->thumbnail")); ?>" alt="" style="width:200px;height:300px;">
                             </center>
                         </div>
                         <div class="card-footer ">
                             <center>
                                 <p class="pad">
-                                <p class="date">{{ $p->upl_date }}</p>
+                                <p class="date"><?php echo e($p->upl_date); ?></p>
 
                                 </p>
                         </div>
@@ -46,8 +44,8 @@
 
                     </div>
                 </div>
-                @endforeach
-                @endif
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php endif; ?>
 
             </a>
             <br />
@@ -58,4 +56,5 @@
 </div>
 <!-- End category Area -->
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.landing', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH E:\IF\Semester 8\Projekan Menpro\menpro\resources\views/lpPengumuman.blade.php ENDPATH**/ ?>
