@@ -1,6 +1,4 @@
-@extends('layouts.landing')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <style>
     .cHide {
         display: none;
@@ -81,14 +79,7 @@
         <div class="col-lg-12">
 
             <div class="row">
-                {{-- <div class="col-md-3" style="">
-               
-                <div class="form-group">
-                  <label>Filter Jurusan</label>
-                  <select class="form-control"></select>
-                </div><!-- - /input-group -->
                 
-              </div> --}}
 
 
                 <div class="col-md-3 text-left" style="">
@@ -98,20 +89,20 @@
                         <select class="error form-control" v-model="jurusan" placeholder="jurusan">
 
                             <option value="0">Semua</option>
-                            @foreach (App\Jurusan::all() as $jur)
-                            <option value="{{ $jur->id }}">{{ $jur->nama }}</option>
-                            @endforeach
+                            <?php $__currentLoopData = App\Jurusan::all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jur): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <option value="<?php echo e($jur->id); ?>"><?php echo e($jur->nama); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
                     </div><!-- /input-group -->
 
                 </div>
 
             </div>
-            @if($prop2->isEmpty())
+            <?php if($prop2->isEmpty()): ?>
             <div class="row text-center" style="padding-top:50px;">
                 <h3>Belum ada data</h3>
             </div>
-            @else
+            <?php else: ?>
             <div class="text-center feature-head">
                 <center>
                     <h1>Daftar Proposal</h1>
@@ -124,17 +115,17 @@
 
 
                         <a href="https://www.rubin.id/daftar-rubin.html">
-                            @foreach ($prop2 as $p2)
+                            <?php $__currentLoopData = $prop2; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-header">
                                         <center>
-                                            <h4 class="mt-0" style="margin-bottom: 20px;"><a href="#" onclick="window.location = '{{ url("proposalview/$p2->id") }}'">{{ $p2->judul }}</a></h4>
+                                            <h4 class="mt-0" style="margin-bottom: 20px;"><a href="#" onclick="window.location = '<?php echo e(url("proposalview/$p2->id")); ?>'"><?php echo e($p2->judul); ?></a></h4>
                                         </center>
                                     </div>
                                     <div class="card-body" style=" background-color: #f4f4f4;">
                                         <center>
-                                            <img class="" src="{{asset("$p2->banner")}}" alt="" style="width:200px;height:300px;" onclick="window.location = '{{ url("proposalview/$p2->id") }}'">
+                                            <img class="" src="<?php echo e(asset("$p2->banner")); ?>" alt="" style="width:200px;height:300px;" onclick="window.location = '<?php echo e(url("proposalview/$p2->id")); ?>'">
 
                                         </center>
                                     </div>
@@ -147,49 +138,41 @@
                                         <center>
                                             <p class="pad">
                                             <p>
-                                                <a class="btn btn-info" style="color:white;padding : 2px 10px !important;">{{ ucfirst($p2->jenis) }}</a>
-                                                <a class="btn btn-success" style="color:white;padding : 2px 10px !important;">{{ ucfirst($p2->bidang) }}</a>
+                                                <a class="btn btn-info" style="color:white;padding : 2px 10px !important;"><?php echo e(ucfirst($p2->jenis)); ?></a>
+                                                <a class="btn btn-success" style="color:white;padding : 2px 10px !important;"><?php echo e(ucfirst($p2->bidang)); ?></a>
                                             </p>
                                             <p>
-                                                <span class="btn btn-primary" style="color:white !important;padding : 2px 10px !important;cursor:pointer;font-size:14px;"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> <b style="color:white !important;" id="pr{{$p2->id}}">{{$p2->like_count}}</b> Disukai</span>
+                                                <span class="btn btn-primary" style="color:white !important;padding : 2px 10px !important;cursor:pointer;font-size:14px;"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> <b style="color:white !important;" id="pr<?php echo e($p2->id); ?>"><?php echo e($p2->like_count); ?></b> Disukai</span>
                                             </p>
                                             </p>
                                             <p class="pad">
                                                 <tr>
-                                                    <td width=210><b> Kelompok:</b><br> {{ $p2->kelompok->nama_kel }}</td>
-                                                    @if(\Auth::check())
-                                                        @if( Auth::user( )->role == '4' || Auth::user( )->role == '5')
+                                                    <td width=210><b> Kelompok:</b><br> <?php echo e($p2->kelompok->nama_kel); ?></td>
+                                                    <?php if(\Auth::check()): ?>
+                                                        <?php if( Auth::user( )->role == '4' || Auth::user( )->role == '5'): ?>
                                                         <td width=30 class="text-center">
-                                                            <span id="pr{{ $p2->id }}like" class="btn btn-primary @if($p2->is_liked) cHide @endif" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="like({{ $p2->id }})"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> Suka</span>
-                                                            <i id="pr{{ $p2->id }}spin" class="fa fa-spinner fa-spin cHide"></i>
-                                                            <span id="pr{{ $p2->id }}unlike" class="btn btn-danger @if(!$p2->is_liked) cHide @endif" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="unlike({{ $p2->id }})"> <i class="fa fa-thumbs-down" style="color:white !important;"></i> Batal Suka</span>
+                                                            <span id="pr<?php echo e($p2->id); ?>like" class="btn btn-primary <?php if($p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="like(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> Suka</span>
+                                                            <i id="pr<?php echo e($p2->id); ?>spin" class="fa fa-spinner fa-spin cHide"></i>
+                                                            <span id="pr<?php echo e($p2->id); ?>unlike" class="btn btn-danger <?php if(!$p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="unlike(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-down" style="color:white !important;"></i> Batal Suka</span>
                                                         </td>
-                                                         @endif
-                                                    @endif
-                                                    {{-- <td><b> Anggota:</b><br>
-                          @foreach ($p2->kelompok->mhs()->get() as $kel)
-                            {{ $kel->nama }},
-                                                    @endforeach
-                                                    </td> --}}
+                                                         <?php endif; ?>
+                                                    <?php endif; ?>
+                                                    
                                                 </tr>
                                             </p> 
                                             <p class="pad">
                                                 <tr>
-                                                    <td width=210><b> Jurusan:</b><br> {{ $p2->kelompok->kelas->jurusan->nama }} </td>
-                                                    @if(\Auth::check())
-                                                        @if( Auth::user( )->role == '4' || Auth::user( )->role == '5')
+                                                    <td width=210><b> Jurusan:</b><br> <?php echo e($p2->kelompok->kelas->jurusan->nama); ?> </td>
+                                                    <?php if(\Auth::check()): ?>
+                                                        <?php if( Auth::user( )->role == '4' || Auth::user( )->role == '5'): ?>
                                                         <td width=30 class="text-center">
-                                                            <span id="pr{{ $p2->id }}like" class="btn btn-primary @if($p2->is_liked) cHide @endif" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="like({{ $p2->id }})"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> Suka</span>
-                                                            <i id="pr{{ $p2->id }}spin" class="fa fa-spinner fa-spin cHide"></i>
-                                                            <span id="pr{{ $p2->id }}unlike" class="btn btn-danger @if(!$p2->is_liked) cHide @endif" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="unlike({{ $p2->id }})"> <i class="fa fa-thumbs-down" style="color:white !important;"></i> Batal Suka</span>
+                                                            <span id="pr<?php echo e($p2->id); ?>like" class="btn btn-primary <?php if($p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="like(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> Suka</span>
+                                                            <i id="pr<?php echo e($p2->id); ?>spin" class="fa fa-spinner fa-spin cHide"></i>
+                                                            <span id="pr<?php echo e($p2->id); ?>unlike" class="btn btn-danger <?php if(!$p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="unlike(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-down" style="color:white !important;"></i> Batal Suka</span>
                                                         </td>
-                                                        @endif
-                                                    @endif
-                                                    {{-- <td><b> Anggota:</b><br>
-                          @foreach ($p2->kelompok->mhs()->get() as $kel)
-                            {{ $kel->nama }},
-                                                    @endforeach
-                                                    </td> --}}
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                    
                                                 </tr>
                                             </p>
                                         </center>
@@ -197,7 +180,7 @@
                                 </div>
                                 <br />
                             </div>
-                            @endforeach
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </a>
 
                     </div>
@@ -210,40 +193,41 @@
             <div class="row">
                 <div class="col-md-4" style="margin: 0 auto;">
 
-                    {{ $prop2->links() }}
+                    <?php echo e($prop2->links()); ?>
+
                 </div>
             </div>
-            @endif
+            <?php endif; ?>
         </div>
     </div>
     </div>
     </div>
 </section>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section("script")
-<script src="{{ asset("dist/js/axios.js") }}"></script>
+<?php $__env->startSection("script"); ?>
+<script src="<?php echo e(asset("dist/js/axios.js")); ?>"></script>
 <script>
     $(".advsrc").hide();
     var app = new Vue({
         el: '#app',
         data: {
-            jenis: '{{ $jenis }}',
-            jurusan: '{{ $jurusan }}',
+            jenis: '<?php echo e($jenis); ?>',
+            jurusan: '<?php echo e($jurusan); ?>',
             advS: 1,
-            bidang: '{{ $bidang }}',
+            bidang: '<?php echo e($bidang); ?>',
             likeds: '',
-            search: '{{ (!is_null($search))? "$search" : ""}}',
+            search: '<?php echo e((!is_null($search))? "$search" : ""); ?>',
         },
         methods: {
             reloc: function() {
-                // console.log("{{ url('proposal') }}/"+this.jurusan+"/"+this.jenis+"/"+this.bidang+"/"+this.search)
-                window.location = "{{ url('proposal') }}/" + this.jurusan + "/" + this.jenis + "/" + this.bidang + "/" + this.search + "?" + this.likeds
+                // console.log("<?php echo e(url('proposal')); ?>/"+this.jurusan+"/"+this.jenis+"/"+this.bidang+"/"+this.search)
+                window.location = "<?php echo e(url('proposal')); ?>/" + this.jurusan + "/" + this.jenis + "/" + this.bidang + "/" + this.search + "?" + this.likeds
             },
             like: function(id) {
                 $("#pr" + id + "like").addClass("cHide")
                 $("#pr" + id + "spin").removeClass("cHide")
-                axios.post('{{ url("like") }}', {
+                axios.post('<?php echo e(url("like")); ?>', {
                         proposal_id: id
                     })
                     .then(function(response) {
@@ -259,7 +243,7 @@
             unlike: function(id) {
                 $("#pr" + id + "unlike").addClass("cHide")
                 $("#pr" + id + "spin").removeClass("cHide")
-                axios.post('{{ url("unlike") }}', {
+                axios.post('<?php echo e(url("unlike")); ?>', {
                         proposal_id: id
                     })
                     .then(function(response) {
@@ -297,4 +281,5 @@
 
     })
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.landing', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Installer\Github\Github\menpro\resources\views/lpProp.blade.php ENDPATH**/ ?>

@@ -1,10 +1,8 @@
-@extends('layouts.home')
-
-@section("content-header")
+<?php $__env->startSection("content-header"); ?>
 <div id="app">
 	<section class="content-header">
 			<h1>
-            Materi Kuliah Kewirausahaan
+				Pengumuman
 				<small></small>
 			</h1>
 	</section>
@@ -16,12 +14,12 @@
 				<div class="row">
 					<div class="col-md-12">
 						
-						<button class="btn btn-success" @click="modalOpen('add')"><i class="fa fa-plus"></i> Buat Materi Kuliah </button>
+						<button class="btn btn-success" @click="modalOpen('add')"><i class="fa fa-plus"></i> Buat Pengumuman</button>
 						
 						
 						<div class="row">
 							<div class="col-md-12">
-								<h3>Materi Kuliah : </h3>
+								<h3>Data Pengumuman : </h3>
 								<div v-if="tableLoading" class="fa-5x text-center">
 										<i class="fa fa-spinner fa-spin"></i>
 								</div>
@@ -30,6 +28,7 @@
 									<tr>
 										<th>No</th>
 										<th>Judul</th>
+										<th>Dibuat Oleh</th>
 										<th>Tanggal Dibuat</th>
 										<th>Action</th>
 									</tr>
@@ -52,39 +51,39 @@
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">×</span></button>
-							<h4 class="modal-title">Buat Materi Kegiatan</h4>
+							<h4 class="modal-title">Buat Pengumuman</h4>
 						</div>
 						<div class="modal-body">
 							<div :class="Boolean(errors.judul)? 'form-group has-error' : 'form-group'">
-								<label >Judul Materi Kuliah </label>
+								<label >Judul Pengumuman</label>
 								<input type="text"  class="error form-control"  v-model="judul" placeholder="Judul">
 								<span v-if="Boolean(errors.judul)"class="help-block">
 									<ul>
-										<li v-for="(item,index) in errors.judul">@{{ item }}</li>
+										<li v-for="(item,index) in errors.judul">{{ item }}</li>
 									</ul>
 								</span>
 							</div>
 
-							<!-- <div :class="Boolean(errors.file)? 'form-group has-error' : 'form-group'">
-								<label >Gambar Kegiatan</label>
+							<div :class="Boolean(errors.file)? 'form-group has-error' : 'form-group'">
+								<label >Gambar Thumbnail</label>
 								<input type="file"  class="error form-control" ref="file" @change="fileHandler()" placeholder="file" accept=".jpg,.png,.jpeg">
 								<small>*Jika tidak diisi akan menggunakan gambar default</small>
 								<span v-if="Boolean(errors.file)"class="help-block">
 									<ul>
-										<li v-for="(item,index) in errors.file">@{{ item }}</li>
+										<li v-for="(item,index) in errors.file">{{ item }}</li>
 									</ul>
 								</span>
-							</div> -->
+							</div>
 							<div id="ld" class="fa-5x text-center">
 								<i class="fa fa-spinner fa-spin"></i>
 							</div>
 							<div id="hiide" :class="Boolean(errors.isi)? 'form-group has-error' : 'form-group'">
 								<label>Isi</label>
-								{{-- <input type="text"  class="error form-control" id="exampleInputEmail1" v-model="domain" placeholder="Nama Jurusan"> --}}
-								<textarea id="texta" v-model="isi">@{{ isi }}</textarea>
+								
+								<textarea id="texta" v-model="isi">{{ isi }}</textarea>
 								<span v-if="Boolean(errors.isi)"class="help-block">
 									<ul>
-										<li v-for="(item,index) in errors.isi">@{{ item }}</li>
+										<li v-for="(item,index) in errors.isi">{{ item }}</li>
 									</ul>
 								</span>
 							</div>
@@ -108,11 +107,11 @@
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">×</span></button>
-							<h4 class="modal-title">Preview Materi</h4>
+							<h4 class="modal-title">Preview Pengumuman</h4>
 						</div>
 						<div class="modal-body">
 							<img :src="img" class="img-responsive" style="max-height:600px;width:100%;margin : 10px auto;">
-							<h2>@{{ judulView }}</h2>
+							<h2>{{ judulView }}</h2>
 							<hr/>
 							<div v-html="isiView"></div>
 
@@ -141,12 +140,12 @@
 	</section>
 </div>
 	<!-- /.content -->
-@endsection
-@section('style')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('style'); ?>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('script')
+<?php $__env->startSection('script'); ?>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
 <script>
@@ -230,7 +229,7 @@ var app = new Vue({
 			let d = this.getDataById(id)
 			this.judulView = d.judul
 			this.isiView = d.isi_html
-			this.img = '{{ asset("/") }}'+d.thumbnail
+			this.img = '<?php echo e(asset("/")); ?>'+d.thumbnail
 			$('#modal-view').modal('show')
 		},
 		getDataById : function(id) {
@@ -244,7 +243,7 @@ var app = new Vue({
 			formData.append('isi', this.isi);
 			formData.append('id', this.dtId);
 
-			axios.post( '{{ url('/editMateriKuliah') }}',
+			axios.post( '<?php echo e(url('/editPengumuman')); ?>',
 						formData,
 						{
 							headers: {
@@ -275,7 +274,7 @@ var app = new Vue({
 			formData.append('judul', this.judul);
 			formData.append('isi', this.isi);
 
-			axios.post( '{{ url('/addMateriKuliah') }}', 
+			axios.post( '<?php echo e(url('/addPengumuman')); ?>',
 						formData,
 						{
 							headers: {
@@ -306,7 +305,7 @@ var app = new Vue({
 			.then(async (confirmed) => {
 				if (confirmed) {
 					await $.ajax({
-						url : "{{ url('deleteMateriKuliah') }}",
+						url : "<?php echo e(url('deletePengumuman')); ?>",
 						method : "POST",
 						dataType : "JSON",
 						data : {"id" : id},
@@ -332,7 +331,7 @@ var app = new Vue({
 				processing: true,
 				serverSide: true,
 				ajax: {
-						url : '{{ url("/getMateriKuliah") }}',
+						url : '<?php echo e(url("getPengumuman")); ?>',
 						type: "GET",
 						dataType: "JSON",
 						complete : function(d){
@@ -343,6 +342,7 @@ var app = new Vue({
 				columns: [
 							{ data: 'DT_RowIndex', name: 'DT_RowIndex' },
 							{ data: 'judul', name: 'nama' },
+							{ data: 'dosen_name', name: 'dosen_name' },
 							{ data: 'upload_date', name: 'upload_date' },
 							{ data: 'action', name: 'action' },
 				]
@@ -373,4 +373,5 @@ var app = new Vue({
 	}
 })
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.home', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Installer\Github\Github\menpro\resources\views/createPengumuman.blade.php ENDPATH**/ ?>

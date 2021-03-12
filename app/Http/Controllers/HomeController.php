@@ -40,6 +40,13 @@ class HomeController extends Controller
         return view('home');
     }
 
+
+    //halaman materi kuliah user
+    public function materikuliah()
+    {
+        return view('');
+    }
+
     public function lpHome()
     {
         $prop1 = Proposal::whereIn('id', function ($query) {

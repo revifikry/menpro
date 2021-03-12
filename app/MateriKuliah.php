@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MateriKuliah extends Model
 {
-    protected $table = "materikuliah";S
+    protected $table = "materikuliah";
 
     protected $appends = ["upload_date"];
 

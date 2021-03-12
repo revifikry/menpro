@@ -63,6 +63,7 @@ Route::middleware('auth')->group(function () {
         Route::get("userData", "AdminController@userData");
         Route::get("koorData", "AdminController@koorData");
         Route::get("getKegiatan", "AdminController@getKegiatan");
+        
 
 
         #ROUTE EDIT
@@ -103,6 +104,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/dosendb', 'DosenController@index');
         Route::get('/dataKelompok', 'DosenController@dataKelompok')->name('dataKelompok');
         Route::get('/materikuliah', 'DosenController@materikuliah')->name('materikuliah');
+        Route::get("/getMateriKuliah", "DosenController@getMateriKuliah")->name("get-materi");
+        Route::post("/addMateriKuliah", "DosenController@addMateriKuliah")->name("add-materi");
 
         Route::post('/editKelompok', 'DosenController@editKelompok');
         Route::get('/editMaterikuliah', 'DosenController@materikuliah');

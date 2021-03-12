@@ -21,11 +21,11 @@
   <!--
     CSS
     ============================================= -->
-  <link rel="stylesheet" href="{{asset("blog/css/linearicons.css")}}">
-  <link rel="stylesheet" href="{{asset("blog/css/font-awesome.min.css")}}">
-  <link rel="stylesheet" href="{{asset("blog/css/bootstrap.css")}}">
-  <link rel="stylesheet" href="{{asset("blog/css/owl.carousel.css")}}">
-  <link rel="stylesheet" href="{{asset("blog/css/main.css")}}">
+  <link rel="stylesheet" href="<?php echo e(asset("blog/css/linearicons.css")); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset("blog/css/font-awesome.min.css")); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset("blog/css/bootstrap.css")); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset("blog/css/owl.carousel.css")); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset("blog/css/main.css")); ?>">
 </head>
 
 <body>
@@ -67,8 +67,8 @@
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="{{ url("/") }}">
-          <img src="{{asset("images/wira.jpg")}}" alt="" style="width:150px;">
+        <a class="navbar-brand" href="<?php echo e(url("/")); ?>">
+          <img src="<?php echo e(asset("images/wira.jpg")); ?>" alt="" style="width:150px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -76,41 +76,29 @@
 
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
           <ul class="navbar-nav">
-            <li><a href="{{ url("/") }}">Home</a></li>
-            <li><a href="{{ url("/pengumuman") }}">Pengumuman</a></li>
+            <li><a href="<?php echo e(url("/")); ?>">Home</a></li>
+            <li><a href="<?php echo e(url("/pengumuman")); ?>">Pengumuman</a></li>
 
-            <li><a href="{{ url("/timdosen") }}">Tim Dosen</a></li>
-            <li><a href="{{ url("/proposal") }}">Pameran</a></li>
-            <li><a href="{{ url("/kegiatan") }}">Kegiatan</a></li>
-            <li><a href="{{ url("/matakuliah") }}">Mata Kuliah</a></li>
-            @if(!Auth::check())
-            <li><a href="{{ url("login") }}">Log In</a></li>
-            @else
-            <li><a href="{{ url("getIn") }}">Dashboard</a></li>
-            <li><a href="{{ route('logout') }}" 
+            <li><a href="<?php echo e(url("/timdosen")); ?>">Tim Dosen</a></li>
+            <li><a href="<?php echo e(url("/proposal")); ?>">Pameran</a></li>
+            <li><a href="<?php echo e(url("/kegiatan")); ?>">Kegiatan</a></li>
+            <li><a href="<?php echo e(url("/matakuliah")); ?>">Mata Kuliah</a></li>
+            <?php if(!Auth::check()): ?>
+            <li><a href="<?php echo e(url("login")); ?>">Log In</a></li>
+            <?php else: ?>
+            <li><a href="<?php echo e(url("getIn")); ?>">Dashboard</a></li>
+            <li><a href="<?php echo e(route('logout')); ?>" 
                    onclick="event.preventDefault();
                    document.getElementById('logout-form').submit();">
                 KELUAR</a>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
+                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                    <?php echo csrf_field(); ?>
                 </form>
             </li>
-            @endif
+            <?php endif; ?>
             <!-- Dropdown -->
-            {{-- <li class="dropdown">
-                  <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Pages
-                  </a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="single.html">Single</a>
-                    <a class="dropdown-item" href="category.html">Category</a>
-                    <a class="dropdown-item" href="search.html">Search</a>
-                    <a class="dropdown-item" href="archive.html">Archive</a>
-                    <a class="dropdown-item" href="generic.html">Generic</a>
-                    <a class="dropdown-item" href="elements.html">Elements</a>
-                  </div>
-                </li>         --}}
+            
           </ul>
         </div>
       </div>
@@ -119,7 +107,7 @@
   <!-- End Header Area -->
 
   <!-- start banner Area -->
-  @yield("content")
+  <?php echo $__env->yieldContent("content"); ?>
   <!-- End team Area -->
 
   <!-- start footer Area -->
@@ -148,17 +136,17 @@
   </footer>
   <!-- End footer Area -->
 
-  <script src="{{asset("blog/js/vendor/jquery-2.2.4.min.js")}}"></script>
+  <script src="<?php echo e(asset("blog/js/vendor/jquery-2.2.4.min.js")); ?>"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="{{asset("blog/js/vendor/bootstrap.min.js")}}"></script>
-  <script src="{{asset("blog/js/jquery.ajaxchimp.min.js")}}"></script>
-  <script src="{{asset("blog/js/parallax.min.js")}}"></script>
-  <script src="{{asset("blog/js/owl.carousel.min.js")}}"></script>
-  <script src="{{ asset("dist/js/vue.js") }}"></script>
-  <script src="{{asset("blog/js/jquery.magnific-popup.min.js")}}"></script>
-  <script src="{{asset("blog/js/jquery.sticky.js")}}"></script>
-  <script src="{{asset("blog/js/main.js")}}"></script>
-  @yield("script")
+  <script src="<?php echo e(asset("blog/js/vendor/bootstrap.min.js")); ?>"></script>
+  <script src="<?php echo e(asset("blog/js/jquery.ajaxchimp.min.js")); ?>"></script>
+  <script src="<?php echo e(asset("blog/js/parallax.min.js")); ?>"></script>
+  <script src="<?php echo e(asset("blog/js/owl.carousel.min.js")); ?>"></script>
+  <script src="<?php echo e(asset("dist/js/vue.js")); ?>"></script>
+  <script src="<?php echo e(asset("blog/js/jquery.magnific-popup.min.js")); ?>"></script>
+  <script src="<?php echo e(asset("blog/js/jquery.sticky.js")); ?>"></script>
+  <script src="<?php echo e(asset("blog/js/main.js")); ?>"></script>
+  <?php echo $__env->yieldContent("script"); ?>
 </body>
 
-</html>
+</html><?php /**PATH C:\Installer\Github\Github\menpro\resources\views/layouts/landing.blade.php ENDPATH**/ ?>
