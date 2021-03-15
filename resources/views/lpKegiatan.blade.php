@@ -26,7 +26,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <center>
-                                    <h4><a href="{{url("/news/".$g->id)}}">{{ $g->judul }}</a></h4>
+                                    <h4><a href="{{url("/kegiatan/".$g->id)}}">{{ $g->judul }}</a></h4>
                                 </center>
                             </div>
                             <div class="card-body" style=" background-color: #f4f4f4;">

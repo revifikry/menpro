@@ -82,19 +82,18 @@
             <li><a href="{{ url("/timdosen") }}">Tim Dosen</a></li>
             <li><a href="{{ url("/proposal") }}">Pameran</a></li>
             <li><a href="{{ url("/kegiatan") }}">Kegiatan</a></li>
-            <li><a href="{{ url("/matakuliah") }}">Mata Kuliah</a></li>
+            <li><a href="{{ url("/matakuliah") }}">Materi Kuliah</a></li>
             @if(!Auth::check())
             <li><a href="{{ url("login") }}">Log In</a></li>
             @else
             <li><a href="{{ url("getIn") }}">Dashboard</a></li>
-            <li><a href="{{ route('logout') }}" 
-                   onclick="event.preventDefault();
+            <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                    document.getElementById('logout-form').submit();">
                 KELUAR</a>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
             </li>
             @endif
             <!-- Dropdown -->
