@@ -82,19 +82,11 @@
             <li><a href="<?php echo e(url("/timdosen")); ?>">Tim Dosen</a></li>
             <li><a href="<?php echo e(url("/proposal")); ?>">Pameran</a></li>
             <li><a href="<?php echo e(url("/kegiatan")); ?>">Kegiatan</a></li>
-            <li><a href="<?php echo e(url("/matakuliah")); ?>">Materi Kuliah</a></li>
+            <li><a href="<?php echo e(url("/matakuliah")); ?>">Mata Kuliah</a></li>
             <?php if(!Auth::check()): ?>
             <li><a href="<?php echo e(url("login")); ?>">Log In</a></li>
             <?php else: ?>
             <li><a href="<?php echo e(url("getIn")); ?>">Dashboard</a></li>
-            <li><a href="<?php echo e(route('logout')); ?>" onclick="event.preventDefault();
-                   document.getElementById('logout-form').submit();">
-                KELUAR</a>
-
-              <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
-                <?php echo csrf_field(); ?>
-              </form>
-            </li>
             <?php endif; ?>
             <!-- Dropdown -->
             

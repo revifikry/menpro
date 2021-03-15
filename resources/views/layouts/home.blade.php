@@ -4,14 +4,7 @@ This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html>
-
 <head>
-
-  <link rel="icon" href="https://kemahasiswaan.itenas.ac.id/wp-content/uploads/2021/02/cropped-logo-itenas-32x32.png" sizes="32x32" />
-  <link rel="icon" href="https://kemahasiswaan.itenas.ac.id/wp-content/uploads/2021/02/cropped-logo-itenas-192x192.png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="https://kemahasiswaan.itenas.ac.id/wp-content/uploads/2021/02/cropped-logo-itenas-180x180.png" />
-  <meta name="msapplication-TileImage" content="https://kemahasiswaan.itenas.ac.id/wp-content/uploads/2021/02/cropped-logo-itenas-270x270.png" />
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Itenas</title>
@@ -41,7 +34,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <![endif]-->
 
   <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -63,87 +57,85 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-
 <body class="hold-transition skin-yellow sidebar-mini">
-  <div class="wrapper">
+<div class="wrapper">
 
-    <!-- Main Header -->
-    @include("include.navbar")
+  <!-- Main Header -->
+  @include("include.navbar")
 
-    <!-- Left side column. contains the logo and sidebar -->
-    @include("include.sidebar")
+  <!-- Left side column. contains the logo and sidebar -->
+  @include("include.sidebar")
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      @yield("content-header")
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+        @yield("content-header")
 
-      <!-- Main content -->
-      <section class="content container-fluid">
+    <!-- Main content -->
+    <section class="content container-fluid">
 
-        <!--------------------------
+      <!--------------------------
         | Your Page Content Here |
         -------------------------->
         @yield("content")
 
-      </section>
-      <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-
-    <!-- Main Footer -->
-    <footer class="main-footer">
-      <!-- To the right -->
-      <div class="pull-right hidden-xs">
-        Anything you want
-      </div>
-      <!-- Default to the left -->
-      <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-    </footer>
-
-    <!-- Control Sidebar -->
-
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-  immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
+    </section>
+    <!-- /.content -->
   </div>
-  <!-- ./wrapper -->
+  <!-- /.content-wrapper -->
 
-  <!-- REQUIRED JS SCRIPTS -->
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
 
-  <!-- jQuery 3 -->
-  <script src="{{ asset("bower_components/jquery/dist/jquery.min.js") }}"></script>
-  <!-- Bootstrap 3.3.7 -->
-  <script src="{{ asset("bower_components/bootstrap/dist/js/bootstrap.min.js") }}"></script>
-  <script src="{{ asset("bower_components/datatables.net/js/jquery.dataTables.min.js") }}"></script>
-  <script src="{{ asset("bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js") }}"></script>
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <!-- AdminLTE App -->
+  <!-- Control Sidebar -->
+  
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
 
-  <script src="{{ asset("dist/js/adminlte.min.js") }}"></script>
-  <script src="{{ asset("dist/js/vue.js") }}"></script>
-  <script src="{{ asset("dist/js/adminlte.min.js") }}"></script>
-  <script src="{{ asset("dist/js/sweetalert.js") }}"></script>
-  <script src="{{ asset("dist/js/axios.js") }}"></script>
-  <script src="{{ asset("bower_components/bootstrap/js/tooltip.js") }}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-  <script>
-    $(function() {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
-    $.ajaxSetup({
-      headers: {
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 3 -->
+<script src="{{ asset("bower_components/jquery/dist/jquery.min.js") }}"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{{ asset("bower_components/bootstrap/dist/js/bootstrap.min.js") }}"></script>
+<script src="{{ asset("bower_components/datatables.net/js/jquery.dataTables.min.js") }}"></script>
+<script src="{{ asset("bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js") }}"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<!-- AdminLTE App -->
+
+<script src="{{ asset("dist/js/adminlte.min.js") }}"></script>
+<script src="{{ asset("dist/js/vue.js") }}"></script>
+<script src="{{ asset("dist/js/adminlte.min.js") }}"></script>
+<script src="{{ asset("dist/js/sweetalert.js") }}"></script>
+<script src="{{ asset("dist/js/axios.js") }}"></script>
+<script src="{{ asset("bower_components/bootstrap/js/tooltip.js") }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script>
+ $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+$.ajaxSetup({
+    headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      }
-    });
-  </script>
+    }
+});
+</script>
 
 
-  <!-- Optionally, you can add Slimscroll and FastClick plugins.
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
-  @yield("script")
+@yield("script")
 </body>
-
 </html>

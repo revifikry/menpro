@@ -42,10 +42,9 @@ class HomeController extends Controller
 
 
     //halaman materi kuliah user
-    public function lpmateri()
+    public function materikuliah()
     {
-        $kuliah = MateriKuliah::orderBy("created_at", "desc")->get();
-        return view('lpmateri', compact("kuliah"));
+        return view('');
     }
 
     public function lpHome()
@@ -90,13 +89,9 @@ class HomeController extends Controller
     public function kegiatan($id)
     {
         $kegi = Kegiatan::findOrFail($id);
-        return view('vkegiatan', compact("kegi"));
+        return view('lpNews', compact("kegi"));
     }
-    public function materi($id)
-    {
-        $materi = MateriKuliah::findOrFail($id);
-        return view('vmateri', compact("materi"));
-    }
+
     public function propview($id)
     {
         $data = [

@@ -15,11 +15,9 @@ Route::get('/', "HomeController@lpHome");
 Route::get('/kegiatan', "HomeController@lpKegiatan");
 Route::get('/pengumuman', "HomeController@lpPengumuman");
 Route::get('/timdosen', "HomeController@lpTimdosen");
-Route::get('/matakuliah', "HomeController@lpmateri");
+Route::get('/matakuliah', "HomeController@materikuliah");
 
 Route::get('/news/{id}', "HomeController@news");
-Route::get('/kegiatan/{id}', "HomeController@kegiatan");
-Route::get('/materi/{id}', "HomeController@materi");
 Route::get('/proposalview/{id}', "HomeController@propview");
 
 Auth::routes();
@@ -65,7 +63,7 @@ Route::middleware('auth')->group(function () {
         Route::get("userData", "AdminController@userData");
         Route::get("koorData", "AdminController@koorData");
         Route::get("getKegiatan", "AdminController@getKegiatan");
-
+        
 
 
         #ROUTE EDIT
