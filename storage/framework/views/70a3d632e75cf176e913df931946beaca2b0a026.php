@@ -1,6 +1,4 @@
-@extends('layouts.home')
-
-@section("content-header")
+<?php $__env->startSection("content-header"); ?>
 <div id="app">
 	<section class="content-header">
 		<h1>
@@ -60,7 +58,7 @@
 									<input type="text" class="error form-control" v-model="judul" placeholder="Judul">
 									<span v-if="Boolean(errors.judul)" class="help-block">
 										<ul>
-											<li v-for="(item,index) in errors.judul">@{{ item }}</li>
+											<li v-for="(item,index) in errors.judul">{{ item }}</li>
 										</ul>
 									</span>
 								</div>
@@ -69,7 +67,7 @@
 									<input type="file" class="error form-control" ref="file" @change="fileHandler()" placeholder="file" accept=".doc,.docx,.pdf">
 									<span v-if="Boolean(errors.file)" class="help-block">
 										<ul>
-											<li v-for="(item,index) in errors.file">@{{ item }}</li>
+											<li v-for="(item,index) in errors.file">{{ item }}</li>
 										</ul>
 									</span>
 								</div>
@@ -80,7 +78,7 @@
 								<small>*Jika tidak diisi akan menggunakan gambar default</small>
 								<span v-if="Boolean(errors.file)"class="help-block">
 									<ul>
-										<li v-for="(item,index) in errors.file">@{{ item }}</li>
+										<li v-for="(item,index) in errors.file">{{ item }}</li>
 									</ul>
 								</span>
 							</div> -->
@@ -89,11 +87,11 @@
 								</div>
 								<div id="hiide" :class="Boolean(errors.isi)? 'form-group has-error' : 'form-group'">
 									<label>Isi</label>
-									{{-- <input type="text"  class="error form-control" id="exampleInputEmail1" v-model="domain" placeholder="Nama Jurusan"> --}}
-									<textarea id="texta" v-model="isi">@{{ isi }}</textarea>
+									
+									<textarea id="texta" v-model="isi">{{ isi }}</textarea>
 									<span v-if="Boolean(errors.isi)" class="help-block">
 										<ul>
-											<li v-for="(item,index) in errors.isi">@{{ item }}</li>
+											<li v-for="(item,index) in errors.isi">{{ item }}</li>
 										</ul>
 									</span>
 								</div>
@@ -121,7 +119,7 @@
 							</div>
 							<div class="modal-body">
 								<img :src="img" class="img-responsive" style="max-height:600px;width:100%;margin : 10px auto;">
-								<h2>@{{ judulView }}</h2>
+								<h2>{{ judulView }}</h2>
 								<hr />
 								<div v-html="isiView"></div>
 
@@ -150,12 +148,12 @@
 	</section>
 </div>
 <!-- /.content -->
-@endsection
-@section('style')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('style'); ?>
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('script')
+<?php $__env->startSection('script'); ?>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
 <script>
@@ -236,7 +234,7 @@
 				let d = this.getDataById(id)
 				this.judulView = d.judul
 				this.isiView = d.isi_html
-				this.img = '{{ asset("/") }}' + d.thumbnail
+				this.img = '<?php echo e(asset("/")); ?>' + d.thumbnail
 				$('#modal-view').modal('show')
 			},
 			getDataById: function(id) {
@@ -250,7 +248,7 @@
 				formData.append('isi', this.isi);
 				formData.append('id', this.dtId);
 
-				axios.post('{{ url(' / editMateriKuliah ') }}',
+				axios.post('<?php echo e(url(' / editMateriKuliah ')); ?>',
 						formData, {
 							headers: {
 								'Content-Type': 'multipart/form-data'
@@ -279,7 +277,7 @@
 				formData.append('judul', this.judul);
 				formData.append('isi', this.isi);
 
-				axios.post('{{ url(' / addMateriKuliah ') }}',
+				axios.post('<?php echo e(url(' / addMateriKuliah ')); ?>',
 						formData, {
 							headers: {
 								'Content-Type': 'multipart/form-data'
@@ -308,7 +306,7 @@
 					.then(async (confirmed) => {
 						if (confirmed) {
 							await $.ajax({
-								url: "{{ url('deleteMateriKuliah') }}",
+								url: "<?php echo e(url('deleteMateriKuliah')); ?>",
 								method: "POST",
 								dataType: "JSON",
 								data: {
@@ -336,7 +334,7 @@
 						processing: true,
 						serverSide: true,
 						ajax: {
-							url: '{{ url("/getMateriKuliah") }}',
+							url: '<?php echo e(url("/getMateriKuliah")); ?>',
 							type: "GET",
 							dataType: "JSON",
 							complete: function(d) {
@@ -388,4 +386,5 @@
 		}
 	})
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.home', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH E:\IF\Semester 8\Projekan Menpro\menpro\resources\views/materikuliah.blade.php ENDPATH**/ ?>
