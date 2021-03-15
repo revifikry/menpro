@@ -53,7 +53,7 @@ class User extends Authenticatable
             case "5":
                 return "User";
             case "6":
-                return "User Itenas";
+                return "Rektor";
         }
     }
 }
