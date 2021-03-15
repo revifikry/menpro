@@ -52,7 +52,7 @@
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">×</span></button>
-							<h4 class="modal-title">Buat Materi Kegiatan</h4>
+							<h4 class="modal-title">Buat Materi Kuliah</h4>
 						</div>
 						<div class="modal-body">
 							<div :class="Boolean(errors.judul)? 'form-group has-error' : 'form-group'">
