@@ -40,17 +40,18 @@ class DosenController extends Controller
             'isi' => 'required',
             'judul' => 'required',
         ]);
-        $fName = "blog/img/itens.jpg";
+        // $fName = "blog/img/itens.jpg";
         if($req->hasFile("file")){
             $fName = time().'_'.$req->file->getClientOriginalName();
             $req->file->move(public_path('upload'), $fName);
-            $fName = "upload/".$fName;
+            // $fName = "upload/".$fName;
         }
 
         $inp = new materikuliah();
-        $inp->file = $fName;
+        // $inp->file = $fName;
         $inp->isi = $req->isi;
         $inp->judul = $req->judul;
+        $inp->file = "upload/" . $fName;
         // $inp->id_user = Auth::user()->id;
         $inp->save();
 

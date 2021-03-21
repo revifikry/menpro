@@ -17,7 +17,7 @@
                 <div class="title text-center">
                     <h1 class="mb-10">Exhibition</h1>
                     <p></p>
-                    <div class="text-left" style="padding-top:0px;width : 30%;position: absolute;right:-460px;top:0px;">
+                    <div class="text-left" style="padding-top:0px;width : 30%;position: absolute;right:-360px;top:100px;">
 
                         <div class="input-group">
                             <input type="text" class="form-control" v-model="search" @keyup.enter="reloc()" placeholder="Cari judul proposal">
@@ -25,7 +25,7 @@
                                 <button class="btn btn-default" type="button" @click="reloc()" style="border:1px solid #ccc;cursor :pointer;"><i class="fa fa-search"></i></button>
                             </span>
                         </div><!-- /input-group -->
-                        <span style="color: blue;text-decoration:underline;cursor:pointer;" @click="advS++"> Advanced Search</span>
+                        <span style="padding-left:10px; color: blue;text-decoration:underline;cursor:pointer;" @click="advS++"> Advanced Search</span>
                         <div class="advsrc">
 
                             <div class="col-md-12 text-left" style="">
@@ -149,28 +149,28 @@
                                                 <tr>
                                                     <td width=210><b> Kelompok:</b><br> <?php echo e($p2->kelompok->nama_kel); ?></td>
                                                     <?php if(\Auth::check()): ?>
-                                                        <?php if( Auth::user( )->role == '4' || Auth::user( )->role == '5'): ?>
-                                                        <td width=30 class="text-center">
-                                                            <span id="pr<?php echo e($p2->id); ?>like" class="btn btn-primary <?php if($p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="like(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> Suka</span>
-                                                            <i id="pr<?php echo e($p2->id); ?>spin" class="fa fa-spinner fa-spin cHide"></i>
-                                                            <span id="pr<?php echo e($p2->id); ?>unlike" class="btn btn-danger <?php if(!$p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="unlike(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-down" style="color:white !important;"></i> Batal Suka</span>
-                                                        </td>
-                                                         <?php endif; ?>
+                                                    <?php if( Auth::user( )->role == '4' || Auth::user( )->role == '5'): ?>
+                                                    <td width=30 class="text-center">
+                                                        <span id="pr<?php echo e($p2->id); ?>like" class="btn btn-primary <?php if($p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="like(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> Suka</span>
+                                                        <i id="pr<?php echo e($p2->id); ?>spin" class="fa fa-spinner fa-spin cHide"></i>
+                                                        <span id="pr<?php echo e($p2->id); ?>unlike" class="btn btn-danger <?php if(!$p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="unlike(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-down" style="color:white !important;"></i> Batal Suka</span>
+                                                    </td>
+                                                    <?php endif; ?>
                                                     <?php endif; ?>
                                                     
                                                 </tr>
-                                            </p> 
+                                            </p>
                                             <p class="pad">
                                                 <tr>
                                                     <td width=210><b> Jurusan:</b><br> <?php echo e($p2->kelompok->kelas->jurusan->nama); ?> </td>
                                                     <?php if(\Auth::check()): ?>
-                                                        <?php if( Auth::user( )->role == '4' || Auth::user( )->role == '5'): ?>
-                                                        <td width=30 class="text-center">
-                                                            <span id="pr<?php echo e($p2->id); ?>like" class="btn btn-primary <?php if($p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="like(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> Suka</span>
-                                                            <i id="pr<?php echo e($p2->id); ?>spin" class="fa fa-spinner fa-spin cHide"></i>
-                                                            <span id="pr<?php echo e($p2->id); ?>unlike" class="btn btn-danger <?php if(!$p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="unlike(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-down" style="color:white !important;"></i> Batal Suka</span>
-                                                        </td>
-                                                        <?php endif; ?>
+                                                    <?php if( Auth::user( )->role == '4' || Auth::user( )->role == '5'): ?>
+                                                    <td width=30 class="text-center">
+                                                        <span id="pr<?php echo e($p2->id); ?>like" class="btn btn-primary <?php if($p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="like(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-up" style="color:white !important;"></i> Suka</span>
+                                                        <i id="pr<?php echo e($p2->id); ?>spin" class="fa fa-spinner fa-spin cHide"></i>
+                                                        <span id="pr<?php echo e($p2->id); ?>unlike" class="btn btn-danger <?php if(!$p2->is_liked): ?> cHide <?php endif; ?>" style="color:white !important;padding : 2px 10px !important;cursor:pointer; font-size:12px;" @click="unlike(<?php echo e($p2->id); ?>)"> <i class="fa fa-thumbs-down" style="color:white !important;"></i> Batal Suka</span>
+                                                    </td>
+                                                    <?php endif; ?>
                                                     <?php endif; ?>
                                                     
                                                 </tr>
