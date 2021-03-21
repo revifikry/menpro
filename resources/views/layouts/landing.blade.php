@@ -48,10 +48,10 @@
                 <li class="fa fa-instagram">
                   <a href="https://www.instagram.com" target="_blank" style="color:white; font-size: 14px;"> @kwu_itenas</a>
                 </li>
-                <li class="fa fa-youtube" style="margin-left: 300px;">
+                <li class="fa fa-youtube">
                   <a href="https://youtube.com" target="_blank" style="color:white; font-size: 14px;"> Kewirausahaan Itenas</a>
                 </li>
-                <li class="fa fa-phone">
+                <li class="fa fa-phone" style="margin-left: 300px;">
                   <a title="Travelify on telephone" target="_blank" style="font-size: 14px;">089123848007</a>
                 </li>
                 <li class="fa fa-envelope">
