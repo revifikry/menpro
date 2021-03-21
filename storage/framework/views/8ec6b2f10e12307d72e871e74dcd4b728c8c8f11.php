@@ -34,8 +34,58 @@
   <header class="default-header">
     <!-- Image and text -->
     <nav class="navbar navbar-light" style=" background-color: #fc8e22;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+      <!-- <div class="container-fluid"> -->
+      <div class="hgroup-wrap clearfix">
+        <section class="hgroup-right">
+          <div class="social-icons clearfix" style="color:white;">
+            <ul>
+              <li class="fa fa-facebook">
+                <a href="https://facebook.com" target="_blank" style="color:white; font-size: 14px;"> Kewirausahaan Itenas</a>
+              </li>
+              <li class="fa fa-twitter">
+                <a href="https://twitter.com" target="_blank" style="color:white; font-size: 14px;"> @kwu_itenas</a>
+              </li>
+              <li class="fa fa-instagram">
+                <a href="https://www.instagram.com" target="_blank" style="color:white; font-size: 14px;"> @kwu_itenas</a>
+              </li>
+              <li class="fa fa-youtube">
+                <a href="https://youtube.com" target="_blank" style="color:white; font-size: 14px;"> Kewirausahaan Itenas</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="d-flex" style="color: white;">
+          <ul>
+            <li class="fa fa-phone">
+              <a title="Travelify on telephone" target="_blank" style="font-size: 14px;">089123848007</a>
+            </li>
+            <li class="fa fa-envelope">
+              <a href="https://gmail.com" style="align-items:flex-start; color:white; font-size: 14px;" target="_blank">Kewirausahaan@itenas.ac.id</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div id="utilitybar" class="utilitybar ">
+        	<div class="ubarinnerwrap">
+                <div class="socialicons">
+                    <ul class="list-inline">
+                      <li><a href="https://colorlib.com" title="facebook" target="_blank"><i class="fa fa-facebook">KWU Itenas</i></a></li>
+                      <li><a href="https://colorlib.com" title="twitter" target="_blank"><i class="fa fa-twitter">@KWU_itenas</i></a></li>
+                      <li><a href="https://colorlib.com" title="youtube" target="_blank"><i class="fa fa-youtube"></i></a></li> 
+                      <li><a href="https://colorlib.com" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>  
+                    </ul>                
+                <div class="topphone">
+                    <i class="fa fa-phone">+62 22 7272215 ext 234</i>      	                   
+                </div>               
+                <div class="topphone">
+                    <i class="fa fa-mail">kemahasiswaan@itenas.ac.id</i>                          
+                </div>
+                 
+                
+                                                               
+            </div> 
+        </div> -->
+      <!-- <a class="navbar-brand" href="#">
           <title>icon</title>
           <script src="https://kit.fontawesome.com/e537e3df50.js" crossorigin="anonymous"></script>
           <style type="text/css">
@@ -46,11 +96,11 @@
             }
           </style>
           <i class="fas fa-mobile-alt"> 089123848007</i>
-          <i class="far fa-envelope"> Kewirausahaan@itenas.ac.id</i>
-          <!-- <img src="blog/img/phone.png" alt="" width="20" height="16" class="d-inline-block align-top"><style type="text/css">p {font-size: 13px;}</style><p>082266778899</p>
+          <i class="far fa-envelope"> Kewirausahaan@itenas.ac.id</i> -->
+      <!-- <img src="blog/img/phone.png" alt="" width="20" height="16" class="d-inline-block align-top"><style type="text/css">p {font-size: 13px;}</style><p>082266778899</p>
           <img src="blog/img/email.png" alt="" width="20" height="16" class="d-inline-block align-top"><style type="text/css">p {font-size: 13px;}</style><p>
             Kewirausahaan@itenas.ac.id</p> -->
-        </a>
+      <!-- </a>
         <div class="col-lg-4 col-sm-12 header-social">
           <style type="text/css">
             i {
@@ -60,10 +110,8 @@
             }
           </style>
           <!-- <a href="#"><i class="fa fa-facebook" width="30" height="24"></i></a>Kewirausahaan Itenas  -->
-          <a href="#"><i class="fa fa-twitter"> @KWU_itenas</i></a>
-          <a href="#"><i class="fa fa-instagram"> @KWU_itenas</i></a>
-        </div>
-      </div>
+      <!-- <a href="#"><i class="fa fa-twitter"> @KWU_itenas</i></a>
+          <a href="#"><i class="fa fa-instagram"> @KWU_itenas</i></a> -->
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">

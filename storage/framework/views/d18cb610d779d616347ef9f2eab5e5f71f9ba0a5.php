@@ -50,18 +50,26 @@
 
               <div class="post-mainpart">
                 <header class="entry-header">
-                  <h1 class="entry-title">
-                    <a href="https://kemahasiswaan.itenas.ac.id/?p=1298" rel="bookmark">Pengumuman Kampus Mengajar 1 Tahun 2021</a>
-                  </h1>
+                  <h3 class="entry-title">
+                    <style>
+                      a {
+                        color: black;
+                      }
+                    </style>
+                    <a href="https://kemahasiswaan.itenas.ac.id/?p=1298" rel="bookmark">Kampus Mengajar 1 Tahun 2021</a>
+                  </h3>
 
                   <div class="entry-meta">
-                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1298" title="Permalink to Pengumuman Kampus Mengajar 1 Tahun 2021" rel="bookmark"><time class="entry-date" datetime="2021-03-15T07:06:50+00:00">March 15, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category">Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author">Buky Achmad</a></span>
+                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1298" title="Permalink to Pengumuman Kampus Mengajar 1 Tahun 2021" rel="bookmark"><time class="entry-date" datetime="2021-03-15T07:06:50+00:00">March 15, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category"> Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author"> Buky Achmad</a></span>
                   </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
 
-                  <p>Kampus Mengajar merupakan bagian dari program Kampus Merdeka yang bertujuan untuk memberikan kesempatan kepada mahasiswa belajar dan mengembangkan diri melalui aktivitas di luar kelas perkuliahan. Di program kampus mengajar, mahasiswa akan ditempatkan&#8230;</p>
+                  <p style="text-indent: 30px">
+                    Kampus Mengajar merupakan bagian dari program Kampus Merdeka yang bertujuan untuk memberikan kesempatan kepada mahasiswa belajar dan mengembangkan diri
+                    melalui aktivitas di luar kelas perkuliahan. Di program kampus mengajar, mahasiswa akan ditempatkan&#8230;
+                  </p>
 
 
                 </div><!-- .entry-content -->
@@ -88,18 +96,18 @@
 
               <div class="post-mainpart">
                 <header class="entry-header">
-                  <h1 class="entry-title">
+                  <h3 class="entry-title">
                     <a href="https://kemahasiswaan.itenas.ac.id/?p=1285" rel="bookmark">Himpunan Mahasiswa Mesin (HMM) Itenas Meraih Juara Pada Kejuaraan ESHARK ROCK Seri &#8211; 2 Tahun 2021</a>
-                  </h1>
+                  </h3>
 
                   <div class="entry-meta">
-                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1285" title="Permalink to Himpunan Mahasiswa Mesin (HMM) Itenas Meraih Juara Pada Kejuaraan ESHARK ROCK Seri &#8211; 2 Tahun 2021" rel="bookmark"><time class="entry-date" datetime="2021-03-15T07:00:51+00:00">March 15, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category">Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author">Buky Achmad</a></span>
+                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1285" title="Permalink to Himpunan Mahasiswa Mesin (HMM) Itenas Meraih Juara Pada Kejuaraan ESHARK ROCK Seri &#8211; 2 Tahun 2021" rel="bookmark"><time class="entry-date" datetime="2021-03-15T07:00:51+00:00">March 15, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category"> Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author"> Buky Achmad</a></span>
                   </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
 
-                  <p>ESHARK ROCK CUP (ERC) merupakan Kejuaraan Nasional balap Gokart tahunan yang diselenggarakan oleh Ikatan Motor Indonesia Pusat. Dalam satu tahun diselenggarakan enam seri, dengan melombakan beberapa kategori lomba, yaitu: mini rok, junior&#8230;</p>
+                  <p style="text-indent: 30px">ESHARK ROCK CUP (ERC) merupakan Kejuaraan Nasional balap Gokart tahunan yang diselenggarakan oleh Ikatan Motor Indonesia Pusat. Dalam satu tahun diselenggarakan enam seri, dengan melombakan beberapa kategori lomba, yaitu: mini rok, junior&#8230;</p>
 
 
                 </div><!-- .entry-content -->
@@ -126,18 +134,18 @@
 
               <div class="post-mainpart">
                 <header class="entry-header">
-                  <h1 class="entry-title">
+                  <h3 class="entry-title">
                     <a href="https://kemahasiswaan.itenas.ac.id/?p=1279" rel="bookmark">INTERNATIONAL CAMPAIGN COMPETITION</a>
-                  </h1>
+                  </h3>
 
                   <div class="entry-meta">
-                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1279" title="Permalink to INTERNATIONAL CAMPAIGN COMPETITION" rel="bookmark"><time class="entry-date" datetime="2021-03-11T14:33:09+00:00">March 11, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category">Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author">Buky Achmad</a></span>
+                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1279" title="Permalink to INTERNATIONAL CAMPAIGN COMPETITION" rel="bookmark"><time class="entry-date" datetime="2021-03-11T14:33:09+00:00">March 11, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category"> Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author"> Buky Achmad</a></span>
                   </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
 
-                  <p>ICC merupakah sebuah event yang diselenggarakan oleh Universitas Ciputra Surabaya bekerja sama dengan universitas internasional untuk merayakan hari bumi pada tanggal 22 April. Tujuan dari acara ini adalah untuk meningkatkan kesadaran publik&#8230;</p>
+                  <p style="text-indent: 30px">ICC merupakah sebuah event yang diselenggarakan oleh Universitas Ciputra Surabaya bekerja sama dengan universitas internasional untuk merayakan hari bumi pada tanggal 22 April. Tujuan dari acara ini adalah untuk meningkatkan kesadaran publik&#8230;</p>
 
 
                 </div><!-- .entry-content -->
@@ -164,18 +172,18 @@
 
               <div class="post-mainpart">
                 <header class="entry-header">
-                  <h1 class="entry-title">
+                  <h3 class="entry-title">
                     <a href="https://kemahasiswaan.itenas.ac.id/?p=1275" rel="bookmark">PHYCOTION, PHYSICS COMIC STRIP COMPETITION</a>
-                  </h1>
+                  </h3>
 
                   <div class="entry-meta">
-                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1275" title="Permalink to PHYCOTION, PHYSICS COMIC STRIP COMPETITION" rel="bookmark"><time class="entry-date" datetime="2021-03-09T13:21:59+00:00">March 9, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category">Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author">Buky Achmad</a></span>
+                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1275" title="Permalink to PHYCOTION, PHYSICS COMIC STRIP COMPETITION" rel="bookmark"><time class="entry-date" datetime="2021-03-09T13:21:59+00:00">March 9, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category"> Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author"> Buky Achmad</a></span>
                   </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
 
-                  <p>Dengan tema &#8220;Daily Life with Physics&#8221;, Pekan Raya Fisika 2021 oleh Himafis FMIPA UNTAN mengadakan sebuah kompetisi komik strip untuk seluruh WNI baik dari pelajar, mahasiswa maupun masyarakat umum. Adapun kompetisi ini&#8230;</p>
+                  <p style="text-indent: 30px">Dengan tema &#8220;Daily Life with Physics&#8221;, Pekan Raya Fisika 2021 oleh Himafis FMIPA UNTAN mengadakan sebuah kompetisi komik strip untuk seluruh WNI baik dari pelajar, mahasiswa maupun masyarakat umum. Adapun kompetisi ini&#8230;</p>
 
 
                 </div><!-- .entry-content -->
@@ -202,18 +210,18 @@
 
               <div class="post-mainpart">
                 <header class="entry-header">
-                  <h1 class="entry-title">
+                  <h3 class="entry-title">
                     <a href="https://kemahasiswaan.itenas.ac.id/?p=1266" rel="bookmark">DATA PRESTASI MAHASISWA</a>
-                  </h1>
+                  </h3>
 
                   <div class="entry-meta">
-                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1266" title="Permalink to DATA PRESTASI MAHASISWA" rel="bookmark"><time class="entry-date" datetime="2021-03-08T13:38:12+00:00">March 8, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category">Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author">Buky Achmad</a></span>
+                    <span class="date"><a href="https://kemahasiswaan.itenas.ac.id/?p=1266" title="Permalink to DATA PRESTASI MAHASISWA" rel="bookmark"><time class="entry-date" datetime="2021-03-08T13:38:12+00:00">March 8, 2021</time></a></span><span class="categories-links"><a href="https://kemahasiswaan.itenas.ac.id/?cat=1" rel="category"> Uncategorized</a></span><span class="author vcard"><a class="url fn n" href="https://kemahasiswaan.itenas.ac.id/?author=6" title="View all posts by Buky Achmad" rel="author"> Buky Achmad</a></span>
                   </div><!-- .entry-meta -->
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
 
-                  <p>Dalam rangka memotivasi mahasiswa untuk berkarya dan berprestasi baik dari korikuler dan ekstrakurikuler, Itenas memberikan beasiswa berupa potongan UKT dan UKV Semester Ganjil 2020/2021 sesuai dengan prestasi yang diraih. Bagi para mahasiswa&#8230;</p>
+                  <p style="text-indent: 30px">Dalam rangka memotivasi mahasiswa untuk berkarya dan berprestasi baik dari korikuler dan ekstrakurikuler, Itenas memberikan beasiswa berupa potongan UKT dan UKV Semester Ganjil 2020/2021 sesuai dengan prestasi yang diraih. Bagi para mahasiswa&#8230;</p>
 
 
                 </div><!-- .entry-content -->
@@ -227,13 +235,6 @@
 
 
           </div>
-
-
-        </div>
-      </div>
-
-
-    </div>
 </section>
 <!-- End banner Area -->
 
