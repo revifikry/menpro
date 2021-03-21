@@ -37,33 +37,28 @@
       <!-- <div class="container-fluid"> -->
       <div class="hgroup-wrap clearfix">
         <section class="hgroup-right">
-          <div class="social-icons clearfix" style="color:white;">
+          <div class="social-icons clearfix" style="color:white; margin-left: 200px;">
             <ul>
-              <li class="fa fa-facebook">
+              < <li class="fa fa-facebook">
                 <a href="https://facebook.com" target="_blank" style="color:white; font-size: 14px;"> Kewirausahaan Itenas</a>
-              </li>
-              <li class="fa fa-twitter">
-                <a href="https://twitter.com" target="_blank" style="color:white; font-size: 14px;"> @kwu_itenas</a>
-              </li>
-              <li class="fa fa-instagram">
-                <a href="https://www.instagram.com" target="_blank" style="color:white; font-size: 14px;"> @kwu_itenas</a>
-              </li>
-              <li class="fa fa-youtube">
-                <a href="https://youtube.com" target="_blank" style="color:white; font-size: 14px;"> Kewirausahaan Itenas</a>
-              </li>
+                </li>
+                <li class="fa fa-twitter">
+                  <a href="https://twitter.com" target="_blank" style="color:white; font-size: 14px;"> @kwu_itenas</a>
+                </li>
+                <li class="fa fa-instagram">
+                  <a href="https://www.instagram.com" target="_blank" style="color:white; font-size: 14px;"> @kwu_itenas</a>
+                </li>
+                <li class="fa fa-youtube" style="margin-left: 300px;">
+                  <a href="https://youtube.com" target="_blank" style="color:white; font-size: 14px;"> Kewirausahaan Itenas</a>
+                </li>
+                <li class="fa fa-phone">
+                  <a title="Travelify on telephone" target="_blank" style="font-size: 14px;">089123848007</a>
+                </li>
+                <li class="fa fa-envelope">
+                  <a href="https://gmail.com" style="align-items:flex-start; color:white; font-size: 14px; " target="_blank">Kewirausahaan@itenas.ac.id</a>
             </ul>
           </div>
         </section>
-        <div class="d-flex" style="color: white;">
-          <ul>
-            <li class="fa fa-phone">
-              <a title="Travelify on telephone" target="_blank" style="font-size: 14px;">089123848007</a>
-            </li>
-            <li class="fa fa-envelope">
-              <a href="https://gmail.com" style="align-items:flex-start; color:white; font-size: 14px;" target="_blank">Kewirausahaan@itenas.ac.id</a>
-            </li>
-          </ul>
-        </div>
       </div>
       <!-- <div id="utilitybar" class="utilitybar ">
         	<div class="ubarinnerwrap">
