@@ -106,11 +106,12 @@ Route::middleware('auth')->group(function () {
         Route::get('/dosendb', 'DosenController@index');
         Route::get('/dataKelompok', 'DosenController@dataKelompok')->name('dataKelompok');
         Route::get('/materikuliah', 'DosenController@materikuliah')->name('materikuliah');
-        Route::get("/getMateriKuliah", "DosenController@getMateriKuliah")->name("get-materi");
-        Route::post("/addMateriKuliah", "DosenController@addMateriKuliah")->name("add-materi");
+        Route::get('/getMateriKuliah', 'DosenController@getMateriKuliah')->name('get-materi');
+        Route::post('/addMateriKuliah', 'DosenController@addMateriKuliah')->name('add-materi');
 
         Route::post('/editKelompok', 'DosenController@editKelompok');
-        Route::get('/editMaterikuliah', 'DosenController@materikuliah');
+        Route::post('/editMaterikuliah', 'DosenController@editMateriKuliah');
+        Route::post('/deleteMaterikuliah', 'DosenController@deleteMateriKuliah');
 
         Route::get('/getTaughClass/{id?}', 'DosenController@getTaughClass');
         Route::get('/getKelDetail/{id}', 'DosenController@getKelDetail');

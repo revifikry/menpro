@@ -34,6 +34,7 @@
                         <div class="single-post-content">
                             {!! $materi->isi !!}
                         </div>
+                        <a  href="{{ url($materi->file) }}" download class="btn btn-primary"><i class="fa fa-download"></i>  Download File </a>
 
                         <!-- End nav Area -->
 

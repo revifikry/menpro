@@ -28,6 +28,7 @@
                             <?php echo $materi->isi; ?>
 
                         </div>
+                        <a  href="<?php echo e(url($materi->file)); ?>" download class="btn btn-primary"><i class="fa fa-download"></i>  Download File </a>
 
                         <!-- End nav Area -->
 

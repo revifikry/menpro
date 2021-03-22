@@ -102,7 +102,7 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-								<button v-if="mdTr == 'add'" type="button" class="btn btn-primary" @click="saveHandler">Tambah</button>
+								<button v-if="mdTr == 'add'" type="submit" class="btn btn-primary" @click="saveHandler">Tambah</button>
 								<button v-if="mdTr == 'edit'" type="button" class="btn btn-primary" @click="editHandler">Simpan</button>
 							</div>
 						</div>
@@ -250,7 +250,7 @@
 				formData.append('isi', this.isi);
 				formData.append('id', this.dtId);
 
-				axios.post('{{ url(' / editMateriKuliah ') }}',
+				axios.post("{{ url('/editMateriKuliah') }}",
 						formData, {
 							headers: {
 								'Content-Type': 'multipart/form-data'
@@ -279,7 +279,7 @@
 				formData.append('judul', this.judul);
 				formData.append('isi', this.isi);
 
-				axios.post('{{ url(' / addMateriKuliah ') }}',
+				axios.post("{{ url('/addMateriKuliah') }}",
 						formData, {
 							headers: {
 								'Content-Type': 'multipart/form-data'
@@ -308,7 +308,7 @@
 					.then(async (confirmed) => {
 						if (confirmed) {
 							await $.ajax({
-								url: "{{ url('deleteMateriKuliah') }}",
+								url: "{{ url('/deleteMateriKuliah') }}",
 								method: "POST",
 								dataType: "JSON",
 								data: {

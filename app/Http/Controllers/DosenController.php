@@ -24,6 +24,7 @@ class DosenController extends Controller
 
     public function MateriKuliah()
     {   
+        
         return view('materikuliah');
     } 
 
@@ -74,6 +75,19 @@ class DosenController extends Controller
                             ->rawColumns(['action'])
                             ->make(true);
     }
+
+    public function deleteMateriKuliah(Request $req)
+    {
+        $validatedData = $req->validate([
+            'id' => 'required'
+        ]);
+        // dd($req->all());
+        $materi = MateriKuliah::find($req->id);
+        $materi->delete();
+
+        return $this->setResponse($materi);
+    }
+
     public function addPengumuman(Request $req)
     {
         $validatedData = $req->validate([
