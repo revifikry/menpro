@@ -334,6 +334,53 @@ class AdminController extends Controller
         return $this->setResponse($inp);
     }
 
+    public function addUserUmum(Request $req)
+    {
+        $validatedData = $req->validate([
+            'nama' => 'required',
+            'nid' => 'required|numeric',
+            'email' => 'required|email|unique:users',
+            'username' => 'required|unique:users',
+            'password' => 'required',
+            'role' => 'required',
+        ]);
+
+        $inp = new User();
+        $inp->nama = $req->nama;
+        $inp->nomor = $req->nid;
+        $inp->email = $req->email;
+        $inp->username = $req->username;
+        $inp->password = bcrypt($req->password);
+        $inp->role = $req->role;
+        $inp->save();
+
+        return $this->setResponse($inp);
+    }
+
+    public function editUserUmum(Request $req)
+    {
+        $validatedData = $req->validate([
+            'id' => 'required',
+            'nid' => 'required|numeric',
+            'email' => 'required|email',
+            'username' => 'required',
+            'role' => 'required',
+        ]);
+
+        $inp = UserUmum::find($req->id);
+        $inp->nama = $req->nama;
+        $inp->nomor = $req->nid;
+        $inp->email = $req->email;
+        $inp->username = $req->username;
+        if($req->has("password")){
+            $inp->password = bcrypt($req->password);
+        }
+        $inp->role = $req->role;
+        $inp->save();
+
+        return $this->setResponse($inp);
+    }
+
     public function editDosen(Request $req)
     {
         $validatedData = $req->validate([
@@ -356,6 +403,18 @@ class AdminController extends Controller
         $inp->save();
 
         return $this->setResponse($inp);
+    }
+
+    public function deleteUserUmum(Request $req)
+    {
+        $validatedData = $req->validate([
+            'id' => 'required'
+        ]);
+        // dd($req->all());
+        $j = UserUmum::find($req->id);
+        $j->delete();
+
+        return $this->setResponse($j);
     }
 
     public function deleteDosen(Request $req)

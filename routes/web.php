@@ -133,6 +133,10 @@ Route::middleware('auth')->group(function () {
 
         Route::post('/deleteProp', 'HomeController@deleteProp');
     });
+
+    Route::middleware('UserUmum')->group(function () {
+    });
+
 });
 
 #ROUTE DATA PROVIDER

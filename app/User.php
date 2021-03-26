@@ -51,7 +51,7 @@ class User extends Authenticatable
             case "4":
                 return "Mahasiswa";
             case "5":
-                return "User";
+                return "User Umum";
             case "6":
                 return "Rektor";
         }
