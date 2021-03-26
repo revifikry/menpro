@@ -110,8 +110,8 @@ Route::middleware('auth')->group(function () {
         Route::post('/addMateriKuliah', 'DosenController@addMateriKuliah')->name('add-materi');
 
         Route::post('/editKelompok', 'DosenController@editKelompok');
-        Route::post('/editMaterikuliah', 'DosenController@editMateriKuliah');
-        Route::post('/deleteMaterikuliah', 'DosenController@deleteMateriKuliah');
+        Route::post('/editMateriKuliah', 'DosenController@editMateriKuliah');
+        Route::post('/deleteMateriKuliah', 'DosenController@deleteMateriKuliah');
 
         Route::get('/getTaughClass/{id?}', 'DosenController@getTaughClass');
         Route::get('/getKelDetail/{id}', 'DosenController@getKelDetail');
@@ -124,7 +124,6 @@ Route::middleware('auth')->group(function () {
 
 
         Route::post('/addKelompok', 'HomeController@addKelompok');
-        Route::post('/editKelompok', 'HomeController@editKelompok');
         Route::post('/addProposal', 'HomeController@addProposal');
 
         Route::post('/editProposal', 'HomeController@editProposal');

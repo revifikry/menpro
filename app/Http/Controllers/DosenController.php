@@ -88,6 +88,30 @@ class DosenController extends Controller
         return $this->setResponse($materi);
     }
 
+    public function editMateriKuliah(Request $req)
+    {
+        $validatedData = $req->validate([
+            'id' => 'required',
+            'isi' => 'required',
+            'judul' => 'required',
+        ]);
+    
+        $inp = MateriKuliah::find($req->id);
+    
+        if ($req->hasFile("file")) {
+            $fName = time() . '_' . $req->file->getClientOriginalName();
+            $req->file->move(public_path('upload'), $fName);
+            $fName = "upload/" . $fName;
+        }
+
+        $inp->isi = $req->isi;
+        $inp->judul = $req->judul;
+        $inp->save();
+
+        return $this->setResponse($inp);
+    }
+
+
     public function addPengumuman(Request $req)
     {
         $validatedData = $req->validate([

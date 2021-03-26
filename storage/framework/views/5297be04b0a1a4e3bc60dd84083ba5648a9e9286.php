@@ -50,7 +50,9 @@
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">×</span></button>
-								<h4 class="modal-title">Buat Materi Kuliah</h4>
+								<!-- <h4 class="modal-title">Buat Materi Kuliah</h4> -->
+								<h4 v-if="mdTr == 'add'" class="modal-title">Tambah Materi Kuliah</h4>
+								<h4 v-if="mdTr == 'edit'" class="modal-title">Edit Materi Kuliah</h4>
 							</div>
 							<div class="modal-body">
 								<div :class="Boolean(errors.judul)? 'form-group has-error' : 'form-group'">
@@ -219,7 +221,7 @@
 				$("#texta").summernote("destroy")
 				let d = this.getDataById(id)
 				this.judul = d.judul
-				this.isi = d.isi_html
+				this.isi = d.isi
 				this.file = undefined
 				this.dtId = id
 				this.errors = {}
@@ -248,7 +250,7 @@
 				formData.append('isi', this.isi);
 				formData.append('id', this.dtId);
 
-				axios.post("<?php echo e(url('/editMateriKuliah')); ?>",
+				axios.post("<?php echo e(url('editMateriKuliah')); ?>",
 						formData, {
 							headers: {
 								'Content-Type': 'multipart/form-data'
@@ -306,7 +308,7 @@
 					.then(async (confirmed) => {
 						if (confirmed) {
 							await $.ajax({
-								url: "<?php echo e(url('/deleteMateriKuliah')); ?>",
+								url: "<?php echo e(url('deleteMateriKuliah')); ?>",
 								method: "POST",
 								dataType: "JSON",
 								data: {
